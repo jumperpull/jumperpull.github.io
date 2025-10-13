@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gn-sci | Maintenance Mode</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Page-specific animations */
+    .shutdown-container {
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .shutdown-icon {
+      font-size: 4.5rem;
+      animation: pulse 2s infinite;
+      display: inline-block;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+    }
+
+    .shutdown-title {
+      font-size: 3rem;
+      color: #ffd700;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+      margin-bottom: 20px;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px rgba(255,215,0,0.5), 0 0 20px rgba(255,215,0,0.3); }
+      to { text-shadow: 0 0 25px rgba(255,215,0,0.9), 0 0 50px rgba(255,215,0,0.6); }
+    }
+
+    .shutdown-message {
+      font-size: 1.2em;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      color: #ddd;
+    }
+
+    .discord-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 25px;
+      border-radius: 10px;
+      background: rgba(255, 215, 0, 0.15);
+      border: 2px solid rgba(255, 215, 0, 0.4);
+      color: #ffd700;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .discord-link:hover {
+      background: rgba(255, 215, 0, 0.3);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    }
+
+    .floating-emoji {
+      position: absolute;
+      font-size: 1.8rem;
+      animation: float 8s infinite ease-in-out;
+      opacity: 0.6;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(-25px) rotate(15deg); }
+      100% { transform: translateY(0) rotate(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2 class="logo">🎮 gn-sci</h2>
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+  </nav>
+
+  <main>
+    <div class="shutdown-container">
+      <div class="shutdown-icon">⚙️</div>
+      <h1 class="shutdown-title">We'll Be Right Back!</h1>
+      <p class="shutdown-message">
+        gn-sci is taking a short break to upgrade servers, fix bugs, and add new games.<br><br>
+        Don’t worry — your favorite unblocked games will be back soon, faster and better than ever.  
+      </p>
+      <a href="https://discord.gg/C6PkFweFz9" target="_blank" class="discord-link">
+        💬 Join the Discord for Updates
+      </a>
+    </div>
+
+    <!-- Fun floating emojis -->
+    <div class="floating-emoji" style="top: 20%; left: 10%;">🎮</div>
+    <div class="floating-emoji" style="top: 60%; left: 80%;">⚡</div>
+    <div class="floating-emoji" style="top: 80%; left: 20%;">🕹️</div>
+    <div class="floating-emoji" style="top: 35%; left: 75%;">🚀</div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 gn-sci. All rights reserved. Made with ❤️ and ChatGPT.</p>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    let darkMode = true;
+
+    themeToggle.addEventListener('click', () => {
+      darkMode = !darkMode;
+      body.classList.toggle('light', !darkMode);
+      themeToggle.textContent = darkMode ? '🌙' : '☀️';
+    });
+  </script>
+</body>
+</html>
