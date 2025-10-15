@@ -1,5 +1,3 @@
-// ✅ script.js (fixed)
-
 document.addEventListener("DOMContentLoaded", () => {
   // 🌙 Dark Mode Toggle
   const toggleBtn = document.getElementById("themeToggle");
@@ -15,9 +13,23 @@ document.addEventListener("DOMContentLoaded", () => {
   searchInput.addEventListener("input", (e) => {
     const search = e.target.value.toLowerCase();
     gameLinks.forEach(link => {
-      link.style.display = link.textContent.toLowerCase().includes(search)
-        ? ""
-        : "none";
+      link.style.display = link.textContent.toLowerCase().includes(search) ? "" : "none";
     });
   });
+
+  // 🌟 Particle Animation
+  const particleContainer = document.getElementById("particle-container");
+  const numParticles = 60; // Number of floating dots
+
+  for (let i = 0; i < numParticles; i++) {
+    const particle = document.createElement("div");
+    particle.classList.add("particle");
+    particle.style.left = `${Math.random() * 100}vw`;
+    particle.style.top = `${Math.random() * 100}vh`;
+    particle.style.width = `${Math.random() * 4 + 2}px`;
+    particle.style.height = particle.style.width;
+    particle.style.animationDuration = `${Math.random() * 15 + 10}s`;
+    particle.style.animationDelay = `${Math.random() * 15}s`;
+    particleContainer.appendChild(particle);
+  }
 });
