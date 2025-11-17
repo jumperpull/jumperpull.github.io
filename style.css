@@ -148,6 +148,24 @@ Thank you
   font-weight: bold;
 }
 
+/* -------- Game Icons in Buttons -------- */
+
+.game-link {
+  display: flex;
+  flex-direction: column;   /* image on top, text below */
+  align-items: center;
+  gap: 12px;  /* space between icon + text */
+}
+
+.game-link img.game-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+
 /* -----------------------------
    Footer
 ----------------------------- */
