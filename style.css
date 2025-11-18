@@ -165,18 +165,10 @@ Thank you
   pointer-events: none;
 }
 
-a {
-  display: block; /* Important for defining dimensions */
-  position: relative; /* Context for absolute positioning */
-  width: 100%; /* Or another responsive width */
-  aspect-ratio: 1 / 1; /* Creates a square container */
-  overflow: hidden; /* Clips any part of the image that overflows */
-}
-
 a img {
-  width: 100%; /* Image fills the container's width */
-  height: 100%; /* Image fills the container's height */
-  object-fit: cover; /* Maintains aspect ratio and covers the container */
+  width: 60px; /* Set a fixed width */
+  height: 60px; /* Set a fixed height */
+  object-fit: cover; /* Crops the image to fit, maintaining aspect ratio */
 }
 
 
