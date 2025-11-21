@@ -153,3 +153,4 @@ Thank you
 ----------------------------- */
 footer { width: 100%; max-width: 1000px; margin-top: 60px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.2); text-align:center; font-size:0.9em; color:#bbb; opacity:0.8; transition: opacity 0.3s ease; }
 footer:hover { opacity: 1; }
+
